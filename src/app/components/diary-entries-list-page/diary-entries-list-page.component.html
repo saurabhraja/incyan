@@ -1,0 +1,77 @@
+<div>
+  <p-table
+      #deListTable
+      [value]="diaryEntriesList"
+      [rows]="100"
+      [paginator]="true"
+      [globalFilterFields]="['content']"
+      styleClass="p-datatable-gridlines"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <span class="p-input-icon-right ml-auto">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Search Content" />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="min-width:15rem">
+            <div class="flex align-items-center">
+                Title
+            </div>
+        </th>
+        <th style="min-width:15rem">
+            <div class="flex align-items-center">
+                Creation Date
+            </div>
+        </th>
+        <th style="min-width:10rem">
+            <div class="flex align-items-center">
+                Content
+            </div>
+        </th>
+        <th style="min-width:10rem">
+            <div class="flex align-items-center">
+                
+            </div>
+        </th>
+        <th style="min-width:10rem">
+          <div class="flex align-items-center">
+              
+          </div>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-diaryEntry>
+      <tr>
+          <td>
+              {{ diaryEntry.title }}
+          </td>
+          <td>
+              {{ diaryEntry.creationDate }}
+          </td>
+          <td>
+              {{ diaryEntry.content }}
+          </td>
+          <td>
+            <p-button label="View" styleClass="p-button-link" 
+              (click)="onViewDiaryEntryDetailsClick(diaryEntry.id);$event.stopPropagation()">
+            </p-button>
+          </td>
+          <td (click)="onDeleteDiaryEntryClick(diaryEntry.id);$event.stopPropagation()" class="cursor-pointer">
+            <i class="pi pi-trash" style="color: red"></i>
+          </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+          <td colspan="7">No diary entries found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <div class="add-btn-container">
+    <p-button label="Add New Shift" (click)="onAddNewDiaryEntryClick()" ></p-button>
+  </div>
+</div>

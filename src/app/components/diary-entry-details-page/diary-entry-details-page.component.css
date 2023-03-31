@@ -1,0 +1,25 @@
+.diary-entry-details-page-wrapper {
+  margin: 0 auto;
+  width: 350px;
+}
+.diary-entry-form-group {
+  margin: 20px;
+}
+label {
+  font-weight: bold;
+}
+input, textarea {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+textarea {
+  height: 200px;
+  padding: 10px;
+}
+.btn-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+}
