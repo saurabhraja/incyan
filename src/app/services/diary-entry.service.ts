@@ -23,6 +23,24 @@ export class DiaryEntryService {
         title: 'Diary Entry 2',
         creationDate: '04/25/2023',
         content: 'This is my second diary entry'
+      },
+      {
+        id: 1,
+        title: 'Diary Entry 3',
+        creationDate: '04/21/2023',
+        content: 'This is my third diary entry'
+      },
+      {
+        id: 2,
+        title: 'Diary Entry 4',
+        creationDate: '09/20/2023',
+        content: 'This is my fourth diary entry'
+      },
+      {
+        id: 2,
+        title: 'Diary Entry 5',
+        creationDate: '11/10/2023',
+        content: 'This is my fifth diary entry'
       }
     ]
   }
