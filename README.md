@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Possible improvements to the app
+
+1. Add the share diary entry feature
+2. Make the app more responsive
+3. Improve the look and feel of user journey
